@@ -29,7 +29,7 @@ class ProfileFragment : Fragment() {
     private fun initContactButtons() {
         binding.buttonSendEmail.setOnClickListener {
             val sendIntent: Intent = Intent().apply {
-                action = Intent.ACTION_SENDTO
+                action = Intent.ACTION_SEND
                 putExtra(Intent.EXTRA_EMAIL, getString(R.string.email_address))
                 type = "text/plain"
             }
