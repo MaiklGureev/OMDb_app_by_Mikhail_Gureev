@@ -1,0 +1,40 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="Theme.OMDbAppByMikhailGureev" parent="Theme.AppCompat.Light">
+
+        <!--The primary branding color for the app.
+        By default, this is the color applied to the action bar background.-->
+        <item name="colorPrimary">@color/light_background</item>
+        <!--Default color of background imagery, ex. full-screen windows.-->
+        <item name="android:colorBackground">@color/background</item>
+        <!--colorOnPrimary: The color used for elements displayed on top of your primary colors
+        (eg. Text and icons, often white or semi-transparent black depending on accessibility)-->
+        <item name="colorOnPrimary">@color/text_title</item>
+        <!--Color of text (usually same as colorForeground).-->
+        <item name="android:textColor">@color/text</item>
+        <!--The color applied to framework buttons in their normal state.-->
+        <item name="android:colorButtonNormal">@color/light_background</item>
+        <!--Default color of foreground imagery.-->
+        <item name="android:colorForeground">@color/grey</item>
+        <!--The most prominent text color.-->
+        <item name="android:textColorPrimary">@color/text_title</item>
+        <!--The color for the status bar.-->
+        <item name="android:statusBarColor">@color/pink</item>
+        <!--The color for the navigation bar.-->
+        <item name="android:navigationBarColor">@color/background</item>
+        <!--Drawable to use as the overall window background.-->
+        <item name="android:windowBackground">@color/background</item>
+
+    </style>
+
+    <style name="Base.Widget.AppCompat.TextView.SimpleText">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <style name="Base.Widget.AppCompat.TextView.TitleText">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_title</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+</resources>

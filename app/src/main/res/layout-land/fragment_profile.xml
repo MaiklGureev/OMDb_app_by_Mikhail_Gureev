@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.profile.ProfileFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/line_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/image_view_avatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="@id/line_1"
+            app:layout_constraintTop_toTopOf="@id/line_3">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/profile_photo" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_fio"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="10dp"
+            android:gravity="center"
+            android:text="@string/fio"
+            android:textAllCaps="true"
+            android:textColor="@color/text_title"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/contact_buttons"
+            app:layout_constraintEnd_toEndOf="@id/line_2"
+            app:layout_constraintStart_toEndOf="@id/image_view_avatar"
+            app:layout_constraintTop_toTopOf="@id/image_view_avatar" />
+
+        <HorizontalScrollView
+            android:id="@+id/contact_buttons"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:scrollbars="horizontal"
+            app:layout_constraintBottom_toBottomOf="@+id/image_view_avatar"
+            app:layout_constraintEnd_toEndOf="@id/line_2"
+            app:layout_constraintStart_toEndOf="@id/image_view_avatar"
+            app:layout_constraintTop_toBottomOf="@+id/text_view_fio">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_marginHorizontal="10dp"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_send_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_email" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_open_github_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_github" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_open_li_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_linkedin" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_open_hh_link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_hh" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_telegram"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_telegram" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_vk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_vk" />
+
+                <androidx.appcompat.widget.AppCompatImageButton
+                    android:id="@+id/button_youtube"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:src="@drawable/ic_youtube" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="5dp"
+            app:layout_constraintBottom_toBottomOf="@id/line_4"
+            app:layout_constraintEnd_toEndOf="@id/line_2"
+            app:layout_constraintStart_toStartOf="@id/line_1"
+            app:layout_constraintTop_toBottomOf="@id/image_view_avatar">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="4dp"
+                android:scrollbars="vertical"
+                android:text="@string/sample_description"
+                android:textSize="16sp" />
+
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

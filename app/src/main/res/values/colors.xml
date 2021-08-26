@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#0D47A1</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF13</color>
+    <color name="yellow">#FF6F00</color>
+    <color name="brown">#AA2800</color>
+    <color name="pink">#F19595</color>
+    <color name="grey">#605D5D</color>
+    <color name="breaze">#006064</color>
+
+
+    <color name="background">#E8E0D6</color>
+    //for example navigation or background
+    <color name="light_background">#F6EEE4</color>
+    //for example button
+    <color name="text_title">#E1755C</color>
+    <color name="text">#384458</color>
+
+</resources>

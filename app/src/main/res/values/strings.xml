@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">OMDb client</string>
+
+    <string name="favorite">Favorite</string>
+    <string name="exit">Exit</string>
+    <string name="search">Search</string>
+    <string name="profile">Developer</string>
+    <string name="clear_favorite">Clear favorite</string>
+    <string name="clear_cache">Clear cache</string>
+    <string name="load_test_data">Load test data to Room</string>
+
+    <string name="sample_description">Higher education (Master)\n--- 2021 ---\nSamara State Aerospace University Academician S.P. Koroleva (National Research University), Samara\n6, Informatics and computer engineering\n--- 2019 ---\nSamara State Aerospace University Academician S.P. Koroleva (National Research University), Samara\n6, Informatics and computer engineering</string>
+    <string name="sample_plot">A young man with spider-like abilities fights crime as a superhero in New York City while trying to have a normal personal life.</string>
+    <string name="sample_type">series</string>
+    <string name="sample_year">1994–1998</string>
+    <string name="sample_title">"Spider-Man"</string>
+    <string name="sample_rating">IMDb rating: 8.4</string>
+    <string name="sample_runtime">Runtime: 23 min</string>
+    <string name="sample_actors">Actors: Christopher Daniel Barnes, Sara Ballantine, Edward Asner</string>
+    <string name="sample_genre">Genre: Animation, Action, Adventure</string>
+    <string name="sample_release_date">Released: 19 Nov 1994</string>
+    <string name="sample_language">Language: English</string>
+    <string name="sample_country">Country: United State</string>
+
+    <string name="fio">Gureev\nMikhail\nAndreevich</string>
+    <string name="email_address">maikl.gureev@gmail.com</string>
+    <string name="hh_url">https://samara.hh.ru/resume/8cc271f5ff0823e0230039ed1f4a4b48346370</string>
+    <string name="vk_url">https://vk.com/mihail.gureev</string>
+    <string name="linkedin_url">https://www.linkedin.com/in/%D0%BC%D0%B8%D1%85%D0%B0%D0%B8%D0%BB-%D0%B3%D1%83%D1%80%D0%B5%D0%B5%D0%B2-52b505205</string>
+    <string name="youtube_url">https://www.youtube.com/channel/UCJ28m64a_VccWdglCDkzOSQ/videos</string>
+    <string name="telegram_url">https://t.me/mihail_gureev</string>
+    <string name="github_url">https://github.com/MaiklGureev/</string>
+
+    <string name="pattern_actors">Actors: %1$s</string>
+    <string name="pattern_genre">Genre: %1$s</string>
+    <string name="pattern_rating">IMDb rating: %1$s</string>
+    <string name="pattern_language">Language: %1$s</string>
+    <string name="pattern_country">Country: %1$s</string>
+    <string name="pattern_release_date">Released: %1$s</string>
+
+    <string name="add_movie_to_favorites">Add to favorites</string>
+    <string name="movie_in_favorites">In favorites</string>
+</resources>

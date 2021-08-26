@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="5dp"
+    tools:context=".fragments.movie.MovieFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/main_constraint_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/line_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/line_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/line_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.05" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/line_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.95" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/poster"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                app:cardCornerRadius="20dp"
+                app:layout_constraintStart_toStartOf="@id/line_1"
+                app:layout_constraintTop_toTopOf="@id/line_3">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/image_view_poster"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    tools:srcCompat="@drawable/sample_poster" />
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_title"
+                style="@style/Base.Widget.AppCompat.TextView.TitleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                app:layout_constraintBottom_toTopOf="@id/text_view_year"
+                app:layout_constraintEnd_toEndOf="@id/line_2"
+                app:layout_constraintStart_toEndOf="@id/poster"
+                app:layout_constraintTop_toTopOf="@+id/poster"
+                tools:text="@string/sample_title" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_year"
+                style="@style/Base.Widget.AppCompat.TextView.SimpleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="end"
+                app:layout_constraintBottom_toTopOf="@id/text_view_type"
+                app:layout_constraintEnd_toEndOf="@id/line_2"
+                app:layout_constraintStart_toEndOf="@id/poster"
+                app:layout_constraintTop_toBottomOf="@id/text_view_title"
+                tools:text="@string/sample_year" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/text_view_type"
+                style="@style/Base.Widget.AppCompat.TextView.SimpleText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:gravity="end"
+                app:layout_constraintBottom_toBottomOf="@+id/poster"
+                app:layout_constraintEnd_toEndOf="@id/line_2"
+                app:layout_constraintStart_toEndOf="@id/poster"
+                app:layout_constraintTop_toBottomOf="@id/text_view_year"
+                tools:text="@string/sample_type" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:layout_marginTop="5dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="@id/line_4"
+                app:layout_constraintEnd_toEndOf="@id/line_2"
+                app:layout_constraintStart_toStartOf="@id/line_1"
+                app:layout_constraintTop_toBottomOf="@id/poster">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_rating"
+                    style="@style/Base.Widget.AppCompat.TextView.SimpleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    tools:text="@string/sample_rating" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_release_date"
+                    style="@style/Base.Widget.AppCompat.TextView.SimpleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    tools:text="@string/sample_release_date" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_language"
+                    style="@style/Base.Widget.AppCompat.TextView.SimpleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    tools:text="@string/sample_language" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_country"
+                    style="@style/Base.Widget.AppCompat.TextView.SimpleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    tools:text="@string/sample_country" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_genre"
+                    style="@style/Base.Widget.AppCompat.TextView.SimpleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    tools:text="@string/sample_genre" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_actors"
+                    style="@style/Base.Widget.AppCompat.TextView.SimpleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="5dp"
+                    tools:text="@string/sample_actors" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/text_view_plot"
+                    style="@style/Base.Widget.AppCompat.TextView.SimpleText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="10dp"
+                    tools:text="@string/sample_plot" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/button_add_to_favorite"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:text="Add to favorite" />
+
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progress_bar_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/text_title"
+        android:indeterminateTintMode="src_in"
+        android:visibility="gone" />
+
+</androidx.cardview.widget.CardView>
