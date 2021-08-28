@@ -49,9 +49,9 @@ class MovieFragment() : Fragment() {
 
     private fun switchTextOnButton(isFavoriteMovie: Boolean) {
         if (isFavoriteMovie) {
-            binding.buttonAddToFavorite?.text = getString(R.string.movie_in_favorites)
+            binding.buttonAddToFavorite.text = getString(R.string.movie_in_favorites)
         } else {
-            binding.buttonAddToFavorite?.text = getString(R.string.add_movie_to_favorites)
+            binding.buttonAddToFavorite.text = getString(R.string.add_movie_to_favorites)
         }
     }
 
@@ -90,13 +90,13 @@ class MovieFragment() : Fragment() {
 
     private fun setDataToView(movieFull: MovieFull) {
         if (movieFull.imdbID == "") {
-            binding.mainConstraintLayout?.visibility = View.GONE
-            binding.progressBarLoading?.visibility = View.VISIBLE
+            binding.mainConstraintLayout.visibility = View.GONE
+            binding.progressBarLoading.visibility = View.VISIBLE
             return
         }
 
-        binding.mainConstraintLayout?.visibility = View.VISIBLE
-        binding.progressBarLoading?.visibility = View.GONE
+        binding.mainConstraintLayout.visibility = View.VISIBLE
+        binding.progressBarLoading.visibility = View.GONE
 
         binding.textViewTitle.text = movieFull.title
         binding.textViewYear.text = movieFull.year
@@ -120,13 +120,13 @@ class MovieFragment() : Fragment() {
             memoryCachePolicy(CachePolicy.ENABLED)
             error(R.drawable.empty_image)
         }
-        buttonAddToFavoriteDisposable = binding.buttonAddToFavorite?.clicks()
-            ?.doOnNext {
+        buttonAddToFavoriteDisposable = binding.buttonAddToFavorite.clicks()
+            .doOnNext {
                 Log.d(TAG, "buttonAddToFavorite: doOnNext")
                 switchTextOnButton(viewModel.switchIsFavoriteMovieAndGetNewValue())
             }
-            ?.debounce(250, TimeUnit.MILLISECONDS)
-            ?.subscribe {
+            .debounce(250, TimeUnit.MILLISECONDS)
+            .subscribe {
                 Log.d(TAG, "buttonAddToFavorite: subscribe onNext")
                 viewModel.addOrDeleteMovieInFavorites()
             }

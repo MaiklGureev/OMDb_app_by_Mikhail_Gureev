@@ -43,7 +43,7 @@ class SearchMoviesViewModel : ViewModel() {
     fun search(query: String, page: Int) {
         Log.d(TAG, "search: ${query}, ${page}")
 
-        if (query == null || page == null || page > currentMaxPage) return
+        if (page > currentMaxPage) return
 
         if (!currentQuery.equals(query)) {
             currentPage = 1

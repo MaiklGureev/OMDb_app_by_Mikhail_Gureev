@@ -56,7 +56,7 @@ class SearchMoviesFragment : Fragment() {
                 if (text.isEmpty() || text == null) return@doOnNext
 
                 viewModel.search(text, 1)
-                binding.recyclerView.visibility = View.GONE
+                binding.recyclerView.visibility = View.INVISIBLE
                 binding.progressBarLoading.visibility = View.VISIBLE
             }
             .subscribe()
@@ -88,7 +88,7 @@ class SearchMoviesFragment : Fragment() {
         viewModel.movieShortListLiveData.observe(viewLifecycleOwner, { list ->
             favoriteMoviesAdapter.setNewDataAndUpdateRecycler(list)
             rw.visibility = View.VISIBLE
-            pb.visibility = View.GONE
+            pb.visibility = View.INVISIBLE
             Log.d(TAG, "movieShortListLiveData: $list")
         })
     }

@@ -1,11 +1,13 @@
 package com.gureev.omdbapp
 
-import android.app.Application
+import android.content.Context
+import androidx.multidex.MultiDex
+import androidx.multidex.MultiDexApplication
 import com.gureev.omdbapp.utils.di.AppComponent
 import com.gureev.omdbapp.utils.di.DaggerAppComponent
 import com.gureev.omdbapp.utils.di.modules.AppModule
 
-class App : Application() {
+class App : MultiDexApplication() {
 
     companion object {
         lateinit var appComponent: AppComponent
@@ -20,6 +22,11 @@ class App : Application() {
         appComponent = DaggerAppComponent.builder()
             .appModule(AppModule(applicationContext))
             .build()
+    }
+
+    override fun attachBaseContext(base: Context) {
+        super.attachBaseContext(base)
+        MultiDex.install(this)
     }
 
 }

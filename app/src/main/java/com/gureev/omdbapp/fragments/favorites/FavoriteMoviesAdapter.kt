@@ -32,7 +32,7 @@ class FavoriteMoviesAdapter(
     }
 
     override fun onBindViewHolder(holder: MovieHolder, position: Int) {
-        val movie = movieList[holder.bindingAdapterPosition]
+        val movie = movieList[holder.adapterPosition]
         holder.bind(movie)
         holder.itemView.setOnClickListener { view ->
             (view.context as AppCompatActivity).supportFragmentManager.commit {
